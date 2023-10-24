@@ -1,19 +1,24 @@
 import pygame
-from pygame.locals import *
+from pygame.locals import * #imports everything
 # PSEUDOCODE FOR GAME:
 # Track cursor
 # On mouse1 hold: change cursor color
 
 dic = {pygame.K_1 : pygame.Color(0,0,0), pygame.K_2 : pygame.Color(255,0,0), pygame.K_3 : pygame.Color(0,255,0), pygame.K_4 : pygame.Color(0,0,255), pygame.K_5 : pygame.Color(0,255,255)} #event.type = k_#
 def main():
-    pygame.init()
-    screen = pygame.display.set_mode((1280, 720))
-    clock = pygame.time.Clock()
+    pygame.init() #pygame.init initialize all imported pygame modules
+    '''In Python, Modules are simply files with the “. py” extension containing Python code 
+    that can be imported inside another Python Program. In simple terms, we can consider a 
+    module to be the same as a code library or a file that contains a set of functions that 
+    you want to include in your application.
+    '''
+    screen = pygame.display.set_mode((1280, 720)) #Initialize a window or screen for display
+    clock = pygame.time.Clock() #create an object to help track time
     running = True 
     is_painting = False
     dt = 0 #delta time, change in time
-    screen.fill((255,255,255))
-    x = (0,0,0) #permanent
+    screen.fill((255,255,255)) #makes screen white
+    x = (0,0,0) #permanent / initializes it as black for pen
     while(running): #while running is true
         mouse_pos = pygame.mouse.get_pos() #returns a tuple for the x,y of mouse
 
