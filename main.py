@@ -38,7 +38,10 @@ def main():
             pygame.draw.rect(screen,x,(mouse_pos[0],mouse_pos[1],4,4), 0) #built in function
             #function above takes (surface, color of surface, rectangle to surface (what its draw,
             # left most, right most, 2 and 2 is width)
-        pygame.display.flip()
+
+
+        
+        pygame.display.flip() #This will update the contents of the entire display. end of function
 
             
 
